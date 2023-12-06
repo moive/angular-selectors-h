@@ -22,6 +22,17 @@
       </select>
     </div>
   </div>
+
+  <!-- Countries -->
+  <div class="row mb-3" *ngIf="borders.length>0">
+    <div class="col">
+      <div class="form-label">Border:</div>
+      <select class="form-select" formControlName="border">
+        <option value="">-- Choose border --</option>
+        <option *ngFor="let border of borders" [value]="border.cca3">{{border.name}}</option>
+      </select>
+    </div>
+  </div>
 </form>
 
 <h3>Formulario</h3>
